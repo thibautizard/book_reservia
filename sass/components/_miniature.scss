@@ -5,21 +5,21 @@
     border-radius: $radiusDesktop;
     @include shadowDesktop;
     transition: all .2s linear;
-    
+
     @include mobile-only {
         margin: 1.7vw 0;
         padding: 1.2vw;
         border-radius: $radiusMobile;
         box-shadow: 0 0 3vw 1vw $shadowColor;
-    } 
+    }
 
     @include tablette-only {
         padding: .7vw;
         margin: 1.1vw 1.1vw;
         border-radius: $radiusTablette;
         box-shadow: 0 0 3vw 1vw $shadowColor;
-    } 
-    
+    }
+
 
 
     &:hover{
@@ -65,7 +65,7 @@
                 }
             }
         }
-        
+
     }
 
 /*
@@ -87,6 +87,9 @@
             height: 8vw;
             border-radius: $radiusDesktop $radiusDesktop 0 0;
 
+            background-position: center !important;
+            background-size: cover !important;
+
             @include mobile-only {
                 height: 30vw;
                 border-radius: $radiusMobile $radiusMobile 0 0;
@@ -95,7 +98,7 @@
             @include tablette-only {
                 height: 14vw;
                 border-radius: 1.5vw 1.5vw 0 0;
-                
+
             }
         }
 
@@ -104,7 +107,7 @@
             @include tablette-only {padding: 0 1.25vw}
         }
 
-        
+
     }
 
 /*
@@ -114,14 +117,14 @@
 */
 
     &--populars {
-        
+
         width:23.5vw;
         height:10vw;
         display:flex;
         align-content: stretch;
 
         @include mobile-only {
-            width:88vw; 
+            width:88vw;
             height:38vw;
         }
 
@@ -139,7 +142,7 @@
             margin-right: .6vw;
             flex-shrink: 0;
 
-            
+
 
             @include mobile-only {
                 width: 32vw;
@@ -163,15 +166,15 @@
 
             p {
                 &:nth-child(1) {
-    
+
                     @include tablette-only {
                         font-size: 3vw;
                         margin: 1.5vw 1.8vw .3vw 0;
                     }
                 }
-    
+
                 &:nth-child(2) {
-    
+
                     @include tablette-only {
                         font-size: 2.5vw;
                         margin-bottom: 1vw;
@@ -186,7 +189,7 @@
                     margin-bottom:1.1vw;
                 }
 
-            } 
+            }
 
 
         }
@@ -212,7 +215,7 @@
             width:87vw;
             margin: 3.5vw 0;
         }
-        
+
         @include tablette-only {
             width: 27vw;
         }
@@ -229,13 +232,13 @@
             @include mobile-only {
                 border-radius: $radiusMobile $radiusMobile 0 0;
                 height:37vw;
-            } 
+            }
 
             @include tablette-only {
-                
+
                 border-radius: $radiusTablette $radiusTablette 0 0;
                 height: 34vw;
-            } 
+            }
         }
 
         &__description {
@@ -245,16 +248,15 @@
             @include mobile-only {
                 font-size: 4.2vw;
                 margin: 4.8vw 5vw;
-            } 
+            }
 
             @include tablette-only {
                 font-size: 1.8vw;
                 margin: 1.2vw 1vw;
-            } 
+            }
         }
     }
 
-    
+
 
 }
-
