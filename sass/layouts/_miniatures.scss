@@ -1,0 +1,61 @@
+.miniatures {
+
+/*
+============
+|| GLOBAL ||
+============
+*/
+    display:flex;
+
+    @include mobile-only {flex-direction: column}
+    @include tablette-only {}
+
+/*
+=================
+|| SUGGESTIONS ||
+=================
+*/
+
+    &__suggestions {
+
+        flex-wrap: wrap;
+
+        @include mobile-only {}
+        @include tablette-only {}
+    }
+
+
+/*
+==============
+|| POPULARS ||
+==============
+*/
+
+    &__populars {
+        
+        flex-direction: column;
+
+        @include mobile-only {}
+        @include tablette-only {flex-flow: row wrap;}
+    }
+
+/*
+================
+|| ACTIVITIES ||
+================
+*/
+
+    &__activities {
+        height:31vw;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between; 
+
+        @include mobile-only {
+            height:auto; 
+            align-items: center
+        }
+
+        @include tablette-only {height:83vw}
+    }  
+}

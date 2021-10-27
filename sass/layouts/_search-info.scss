@@ -1,0 +1,82 @@
+.search-info {
+
+/*
+============
+|| GLOBAL ||
+============
+*/   
+
+    font-size: 1.1vw;
+    display:flex;
+    align-items: center;
+    margin: 2vw .6vw;
+
+    @include mobile-only {
+        font-size: 4vw;
+        margin: 7vw 0;
+    }
+
+    @include tablette-only {
+        font-size: 2.2vw;
+        margin: 3.5vw 0;
+    }
+
+
+/*
+==========
+|| ICON ||
+==========
+*/  
+
+    &__icon-info {
+
+        height:1.7vw;
+        width: 1.7vw;
+
+        color:$blue;
+        font-size: 1vw;
+        font-weight: bold;
+        line-height: 1.6vw;
+        text-align: center;
+        
+        border: .05vw solid lightgrey;
+        border-radius:2vw;
+        
+        margin-right: .8vw;
+
+        @include mobile-only {
+            
+            height:7vw;
+            width: 7vw;
+            
+            color:$blue;
+            font-size: 4vw;
+            font-weight: bold;
+            line-height: 7vw;
+            text-align: center;
+            
+            border: .05vw solid lightgrey;
+            border-radius:6vw;
+
+            margin-right: 3vw;
+        }
+
+        @include tablette-only {
+
+            height: 3vw;
+            width: 3vw;
+            
+            color:$blue;
+            font-size: 1.8vw;
+            font-weight: bold;
+            line-height: 3vw;
+            text-align: center;
+            
+            border: .05vw solid lightgrey;
+            border-radius: 3vw;
+
+            margin-right: 1.5vw;
+        }
+    }
+
+}

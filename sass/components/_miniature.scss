@@ -1,0 +1,260 @@
+.miniature {
+
+    margin : .7vw;
+    padding: .3vw;
+    border-radius: $radiusDesktop;
+    @include shadowDesktop;
+    transition: all .2s linear;
+    
+    @include mobile-only {
+        margin: 1.7vw 0;
+        padding: 1.2vw;
+        border-radius: $radiusMobile;
+        box-shadow: 0 0 3vw 1vw $shadowColor;
+    } 
+
+    @include tablette-only {
+        padding: .7vw;
+        margin: 1.1vw 1.1vw;
+        border-radius: $radiusTablette;
+        box-shadow: 0 0 3vw 1vw $shadowColor;
+    } 
+    
+
+
+    &:hover{
+        transform: translateY(-.3vw);
+        background: $blue;
+        color:white;
+        .stars .active {color: white;}
+    }
+
+    &__description {
+
+        padding-left: .5vw;
+
+        p {
+            &:nth-child(1) {
+
+                font-size: 1vw;
+                margin: .7vw .2vw 0 0;
+
+                @include mobile-only {
+                    font-size: 4vw;
+                    margin: 3vw 1.7vw 0 0;
+                }
+
+                @include tablette-only {
+                    font-size: 2vw;
+                    margin: 1.5vw .9vw 0 0;
+                }
+            }
+
+            &:nth-child(2) {
+                font-size:.9vw;
+                margin-bottom: .5vw;
+
+                @include mobile-only {
+                    font-size: 3.7vw;
+                    margin-bottom: 2vw;
+                }
+
+                @include tablette-only {
+                    font-size: 1.85vw;
+                    margin-bottom: 1vw;
+                }
+            }
+        }
+        
+    }
+
+/*
+=================
+|| SUGGESTIONS ||
+=================
+*/
+
+    &--suggestions {
+
+        width:17vw;
+        @include mobile-only {width: 88vw}
+        @include tablette-only {
+            width: 39vw;
+            margin: 1.5vw 1.5vw;
+        }
+
+        &__image{
+            height: 8vw;
+            border-radius: $radiusDesktop $radiusDesktop 0 0;
+
+            @include mobile-only {
+                height: 30vw;
+                border-radius: $radiusMobile $radiusMobile 0 0;
+            }
+
+            @include tablette-only {
+                height: 14vw;
+                border-radius: 1.5vw 1.5vw 0 0;
+                
+            }
+        }
+
+        &__description {
+            @include mobile-only {padding: 0 2.5vw}
+            @include tablette-only {padding: 0 1.25vw}
+        }
+
+        
+    }
+
+/*
+==============
+|| POPULARS ||
+==============
+*/
+
+    &--populars {
+        
+        width:23.5vw;
+        height:10vw;
+        display:flex;
+        align-content: stretch;
+
+        @include mobile-only {
+            width:88vw; 
+            height:38vw;
+        }
+
+        @include tablette-only {
+            height:24vw;
+            width: 81.5vw;
+            margin: 2vw 0;
+        }
+
+
+        &__image{
+            width: 9vw;
+            border-top-left-radius: .6vw;
+            border-bottom-left-radius: .6vw;
+            margin-right: .6vw;
+            flex-shrink: 0;
+
+            
+
+            @include mobile-only {
+                width: 32vw;
+                border-radius: $radiusMobile 0 0 $radiusMobile;
+            }
+
+            @include tablette-only {
+                width: 30vw;
+                border-radius: 1.5vw 0 0 1.5vw;
+            }
+        }
+
+        &__description {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            padding: .2vw 1vw;
+
+            @include mobile-only {padding: 0vw 5vw}
+            @include tablette-only {padding: .4vw 3vw}
+
+            p {
+                &:nth-child(1) {
+    
+                    @include tablette-only {
+                        font-size: 3vw;
+                        margin: 1.5vw 1.8vw .3vw 0;
+                    }
+                }
+    
+                &:nth-child(2) {
+    
+                    @include tablette-only {
+                        font-size: 2.5vw;
+                        margin-bottom: 1vw;
+                    }
+                }
+            }
+
+            .stars {
+
+                @include tablette-only {
+                    font-size:2.5vw;
+                    margin-bottom:1.1vw;
+                }
+
+            } 
+
+
+        }
+    }
+
+
+/*
+================
+|| ACTIVITIES ||
+================
+*/
+
+
+    &--activities {
+
+        width:21vw;
+        margin:0;
+        padding:0;
+        padding-bottom: .01vw;
+        @include shadowDesktop;
+
+        @include mobile-only {
+            width:87vw;
+            margin: 3.5vw 0;
+        }
+        
+        @include tablette-only {
+            width: 27vw;
+        }
+
+
+        &__image {
+            border-top-left-radius: .6vw;
+            border-top-right-radius: .6vw;
+
+            &--s {height:7vw}
+            &--m {height:12vw}
+            &--l {height:27.2vw}
+
+            @include mobile-only {
+                border-radius: $radiusMobile $radiusMobile 0 0;
+                height:37vw;
+            } 
+
+            @include tablette-only {
+                
+                border-radius: $radiusTablette $radiusTablette 0 0;
+                height: 34vw;
+            } 
+        }
+
+        &__description {
+            font-size: 1.1vw;
+            margin: 1.25vw .7vw;
+
+            @include mobile-only {
+                font-size: 4.2vw;
+                margin: 4.8vw 5vw;
+            } 
+
+            @include tablette-only {
+                font-size: 1.8vw;
+                margin: 1.2vw 1vw;
+            } 
+        }
+    }
+
+    
+
+}
+

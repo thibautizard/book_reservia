@@ -1,0 +1,211 @@
+/*
+============
+|| GLOBAL ||
+============
+*/  
+
+main, header {
+    margin: auto;
+    width:92vw;
+    @include mobile-only {width: 100vw;}
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    @include mobile-only {flex-direction: column;}
+}
+
+section {
+
+    margin-bottom: 3vw;
+    border-radius: 1.3vw;
+
+    @include mobile-only {
+        margin-bottom: 0;
+    }
+
+    @include tablette-only {
+        margin-bottom: 6vw;
+        border-radius: 2.3vw;
+    }
+
+    h1 {
+        font-size: 1.47vw;
+        font-weight: bold;
+        margin-bottom: 1vw;
+        display:flex;
+        justify-content: space-between;
+        padding-right: 5%;
+
+        @include mobile-only {
+            font-size: 6vw;
+            margin-bottom: 6vw
+        
+        }
+        @include tablette-only {
+            font-size: 3vw;
+            margin-bottom: 3vw
+        }
+
+    }
+    
+    h2 {
+        font-size: 1.17vw;
+        font-weight: 500;
+        color: $grey;
+
+        @include mobile-only {
+            margin-top:3vw;
+            font-size: 5vw;
+        }
+
+        @include tablette-only {
+            margin-top:.8vw;
+            font-size: 2.5vw;
+        }
+
+    }
+}
+
+/*
+=================
+|| SEARCH BLOC ||
+=================
+*/  
+
+.search-bloc {
+
+    @include mobile-only {
+        padding: 0 5vw;
+    }
+    
+
+    h1 {
+        @include mobile-only {
+            margin-top: 3.2vw;
+            font-size: 5.7vw; 
+            margin:0;
+        }
+
+        @include tablette-only {
+            font-size: 3vw; 
+            margin:0;
+        }
+    }
+
+    h2 {
+
+        @include mobile-only {
+            margin-top:2.5vw;
+            font-size: 4vw;
+        }
+
+        @include tablette-only {
+            font-size: 2.5vw;
+        }
+
+    }
+}
+
+
+/*
+==================
+|| HEBERGEMENTS ||
+==================
+*/ 
+
+#hebergements {
+    width: 65%;
+    margin-right:2.85vw;
+    padding: 2.6vw 2.3vw;
+    background: $lightgrey;
+
+    @include mobile-only {
+        width: 100%;
+        margin-right:0;
+        padding: 6vw 5vw;
+        background: white;
+        order:2;
+    }
+
+    @include tablette-only {
+        width: 94vw;
+        margin-right:0;
+        padding: 4vw 2vw 4vw 4vw;
+        order:2;
+    }
+    
+
+    h2 {
+        margin-top: 1.5vw;
+        color:black;
+        font-weight: 600;
+        cursor:pointer;
+
+        @include mobile-only {margin-top: 8vw;}
+        @include tablette-only {margin-top: 5vw;}
+    }
+}
+
+
+/*
+==============
+|| POPULARS ||
+==============
+*/
+
+#populars {
+    width: 31%;
+    padding: 2.6vw 1.8vw;
+    background: $lightgrey;
+
+    @include mobile-only {
+        order:1;
+        width: 100%;
+        padding: 6vw 4vw;
+    }
+
+    @include tablette-only {
+        order:1;
+        width: 92vw;
+        padding: 4vw 2vw 4vw 4vw;
+
+    }
+}
+
+/*
+================
+|| ACTIVITIES ||
+================
+*/
+
+#activities {
+    
+    width: inherit;
+    background: white;
+
+    @include mobile-only {
+        order:3;
+        margin:10vw 0;
+    }
+
+    @include tablette-only {
+        order:3;
+    }
+
+
+    h1 {
+        margin-bottom: 1.5vw;
+
+        @include mobile-only {
+            margin-bottom: 5vw;
+            margin-left: 6vw;
+        }
+
+        @include tablette-only {
+            margin-bottom: 3.5vw;
+        }
+    }
+}

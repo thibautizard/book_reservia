@@ -1,0 +1,28 @@
+/*
+================
+|| RESPONSIVE ||
+================
+*/
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+  }
+
+  @mixin tablette-only {
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)){
+        @content;
+    }
+  }
+
+/*
+=============
+|| SHADOWS ||
+=============
+*/
+  
+  @mixin shadowDesktop {
+    box-shadow: 0 0 1vw .5vw $shadowColor;
+  }
+

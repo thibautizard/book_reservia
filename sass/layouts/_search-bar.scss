@@ -1,0 +1,138 @@
+.search-bar {
+
+/*
+============
+|| GLOBAL ||
+============
+*/
+
+    margin: 1.8vw 0;
+    display: flex;
+    height:3.5vw;
+
+    @include mobile-only {
+        margin: 3vw auto;
+        justify-content: center;
+        height:13vw;
+        position: relative;
+        left:2.5vw;
+        margin: 7vw 0;
+    }
+
+    @include tablette-only {
+        margin: 6vw auto;
+        justify-content: center;
+        height:7.6vw;
+        position: relative;
+    }
+    
+ /*
+==========
+|| ICON ||
+==========
+*/   
+
+    &__location-icon {
+
+        font-size: 1.25vw;
+        line-height: 3.35vw;
+        width: 3.3vw;
+        border-top-left-radius: .8vw;
+        border-bottom-left-radius: .8vw;
+        background: rgb(240, 240, 240);
+        text-align: center;
+        padding-left: .2vw;
+
+        @include mobile-only {
+            font-size: 4.7vw;
+            line-height: 13vw;
+            width: 15vw;
+            border-top-left-radius: 3vw;
+            border-bottom-left-radius: 3vw;
+        }
+
+        @include tablette-only {
+            font-size: 2.5vw;
+            line-height: 7.2vw;
+            width: 7.5vw;
+            border-radius: 1.5vw 0 0 1.5vw;
+        }
+    }
+
+/*
+===============
+|| RECHERCHE ||
+===============
+*/
+
+    &__search-input {
+        
+        font-size: 1.25vw;
+        width: 17vw;
+        height:auto;
+        padding-left: 1vw;
+        font-weight: 600;
+        border: .05vw solid rgb(235, 235, 235); 
+
+        @include mobile-only {
+            font-size: 4.8vw;
+            width: 68vw;
+            padding-left: 4vw;
+            border: .3vw solid rgb(235, 235, 235); 
+        }
+
+        @include tablette-only {
+            font-size: 2.4vw;
+            width: 38vw;
+            padding-left: 3vw;
+            border: .15vw solid rgb(235, 235, 235); 
+        }
+    }
+
+
+/*
+============
+|| BOUTON ||
+============
+*/
+
+    &__button {
+        width: 10vw;
+        
+        font-size: 1.2vw;
+        color:white;
+        font-weight: 600;
+        text-align: center;
+
+        border: none;
+        border-top-right-radius: .8vw;
+        border-bottom-right-radius: .8vw;
+        background: $blue;
+        cursor: pointer;
+
+        span {display:inline;}
+        i {display:none;}
+
+        @include mobile-only {
+
+            font-size: 4.5vw;
+            border-radius: 3.5vw;
+            width: 14.5vw;
+            font-weight: 400;
+            position:relative;
+            left: -4vw;
+
+            span {display:none;}
+            i {display:inline;}
+        }
+
+        @include tablette-only {
+            font-size: 2.25vw;
+            border-radius: 0 1.75vw 1.75vw 0;
+            width: 18vw;
+
+            span {display:inline;}
+            i {display:none;}
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.footer {
+
+/*
+============
+|| GLOBAL ||
+============
+*/
+
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 3vw 3.5vw;
+    background-color: $lightgrey;
+
+    @include mobile-only {
+        padding-bottom: 10vw;
+        display:block;
+    } 
+
+    @include tablette-only {
+        justify-content: space-between;
+    } 
+
+/*
+==========
+|| TEXT ||
+==========
+*/
+    
+    &__info {
+
+        width:17vw;
+
+        @include mobile-only {
+            width:auto;
+            margin-top: 10vw;
+            margin-left: 5vw;
+        } 
+
+        @include tablette-only {
+            box-sizing: content-box;
+            width:25vw;
+            padding: 2vw 2vw;
+        } 
+
+        
+
+        h2 {
+            color:black;
+            font-weight: 600;
+            margin-bottom: 1.2vw;
+            font-size:1.2vw;
+
+            @include mobile-only {
+                margin-bottom: 5.5vw;
+                font-size:4.7vw;
+            } 
+
+            @include tablette-only {
+                font-size:2.3vw;   
+                margin-bottom: 2vw;
+            } 
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+
+            li {
+                font-size: 1vw;
+                margin: .9vw 0;
+
+                @include mobile-only {
+                    font-size: 4.3vw;
+                    margin: 3vw 0;
+                } 
+
+                @include tablette-only {
+                    font-size: 1.7vw;
+                    margin: 1vw 0;
+                } 
+            }
+        }
+
+    }
+    
+}

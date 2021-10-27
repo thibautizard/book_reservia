@@ -1,0 +1,77 @@
+/*
+============
+|| COLORS ||
+============
+*/
+
+$lightgrey: #F2F2F2;
+$blue: #0065FC;
+$paleBlue: #DEEBFF;
+$grey:rgb(113, 113, 113);
+$shadowColor: rgba(109, 109, 109, 0.2); 
+
+/*
+============
+|| RADIUS ||
+============
+*/
+
+$radiusDesktop : .6vw;
+$radiusMobile: 5vw;
+$radiusTablette : 2vw;
+
+/*
+=================
+|| BREAKPOINTS ||
+=================
+*/
+
+$breakpoints: (
+  mobile: 599px,
+  tablette: 768px
+);
+
+/*
+============
+|| IMAGES ||
+============
+*/
+$links: (
+  suggestions: (
+    1: '../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg'
+  )
+);
+
+
+.miniature {
+  @each $type, $link in $links {
+    &.--#{$type}__image {
+      background-image: url(map-get($link, 1))
+    }
+  }
+  
+}
+
+
+// a {
+//   &:nth-child(1) .miniature--suggestions__image {background-image: url('../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg')}
+//   &:nth-child(2) .miniature--suggestions__image {background-image: url('../images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg')}
+//   &:nth-child(3) .miniature--suggestions__image {background-image: url('../images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg')}
+//   &:nth-child(4) .miniature--suggestions__image {background-image: url('../images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg')}
+//   &:nth-child(5) .miniature--suggestions__image {background-image: url('../images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg')}
+//   &:nth-child(6) .miniature--suggestions__image {background-image: url('../images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg')}
+
+//   &:nth-child(1) .miniature--populars__image {background-image: url('../images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg')}
+//   &:nth-child(2) .miniature--populars__image {background-image: url('../images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg')}
+//   &:nth-child(3) .miniature--populars__image {background-image: url('../images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg')}
+
+//   &:nth-child(1) .miniature--activities__image {background-image: url('../images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg')}
+//   &:nth-child(2) .miniature--activities__image {background-image: url('../images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg')}
+//   &:nth-child(3) .miniature--activities__image {background-image: url('../images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg')}
+//   &:nth-child(4) .miniature--activities__image {background-image: url('../images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg')}
+//   &:nth-child(5) .miniature--activities__image {background-image: url('../images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg')}
+//   &:nth-child(6) .miniature--activities__image {background-image: url('../images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg')}
+// }
+
+
+
